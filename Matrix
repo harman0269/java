@@ -1,0 +1,36 @@
+
+package myjava;
+import java.util.*;
+public class Matrix {
+
+	public static void main(String[] args) {
+		int mat[][]=new int[100][100];
+		Scanner x = new Scanner(System.in);
+		int i,j,r,c;
+		System.out.println("enter the no. of rows");
+		r=x.nextInt();
+		System.out.println("enter the no. of columns");
+		
+		c=x.nextInt();
+		System.out.print("enter the elements of matrix");
+		for(i=0;i<r;i++) {
+			for(j=0;j<c;j++) {
+				mat[i][j]=x.nextInt();
+			}
+		}
+		System.out.print("matrix");
+		for(i=0;i<r;i++) {
+			for(j=0;j<c;j++) {
+				System.out.print("\t"+mat[i][j]);
+				
+			}
+			System.out.print("\n");
+			
+		}
+			}
+		
+		
+
+	}
+
+
