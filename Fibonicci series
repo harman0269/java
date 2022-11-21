@@ -1,0 +1,24 @@
+package myjava;
+import java.util.*;
+class Fibbonici {
+	int a=0,b=1,c,i;
+
+	public Fibbonici() {    
+		System.out.print(a+" "+b);   
+		    
+		 for(i=2;i<10;++i)  
+		 {    
+		  c=a+b;    
+		  System.out.print(" "+c);    
+		  a=b;    
+		  b=c;  
+		  }
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Fibbonici x=new Fibbonici(); 
+
+	}
+
+}
