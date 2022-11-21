@@ -1,0 +1,40 @@
+package myjava;
+
+import java.util.Scanner;
+
+public class binarysearchh {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn=new Scanner(System.in);
+		int n=scn.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<arr.length;i++)
+		{
+			arr[i]=scn.nextInt();
+			
+	}
+		int trgt=scn.nextInt();
+		int lo=0;
+		int idx=-1;
+		int hi=arr.length-1;
+		while(lo<=hi) {
+			int mid=(lo+hi)/2;
+			if(trgt>arr[mid]) {
+				lo=mid+1;
+			}
+			else if(trgt<arr[mid]) {
+				hi=mid-1;
+				
+			}
+			else {
+				idx=lo;
+				break;
+			}
+			
+		}
+		System.out.println(idx);
+		
+	}
+
+}
