@@ -1,0 +1,58 @@
+package myjava;
+import java.util.Scanner;
+public class bookallocation { 
+	public static void main(String[] args) {
+		Scanner scn=new Scanner(System.in);
+		int n=scn.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<=arr.length;i++) {
+			arr[i]=scn.nextInt();
+		}
+		int lo=0;
+		int val=0;
+		for(int i=0;i<=arr.length;i++) {
+			val+=arr[i];
+		}
+		int nos=scn.nextInt();
+		int hi=val;
+		int res=0;
+		while(lo<=hi) {
+			int mid=(lo+hi)/2;
+			boolean ans=isItPossible(arr,nos,mid);
+			if(ans==true) {
+				hi=mid-1;
+				res=mid;	
+			}
+			else {
+				lo=mid+1;
+			}
+	
+		}
+	}
+		public static boolean isItPossible(int arr[],int nos,int mid) {
+			int lp=0;
+			int ssf=1;
+			int nop=0;
+			for(int i=lp;i<arr.length;) {
+				if(arr[i]>mid) {
+					return false;
+				}
+				
+				if(nop+arr[i]<=mid) {
+					
+					nop=nop+arr[i];
+					lp++;
+				}
+				else {
+					ssf+=1;
+					nop=0;
+				}
+			}
+			if(ssf<=nos) {
+				return true;
+			}
+			return false;
+		}
+	}
+	
+
