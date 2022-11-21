@@ -1,0 +1,21 @@
+package myjava;
+import java.util.Scanner;
+public class gcd {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn=new Scanner(System.in);
+		int divisor=scn.nextInt();	//24
+		int divident=scn.nextInt();	//16
+		while(divisor!=0) {
+			int temp=divisor;
+			int val=divident%divisor;
+			divisor=val;
+			divident=temp;
+		} 
+		System.out.println(divident);
+		
+
+	}
+
+}
