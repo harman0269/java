@@ -1,0 +1,25 @@
+package myjava;
+import java.util.Scanner;
+public class printfactors {
+	public static void main(String[] args) {
+		Scanner scn=new Scanner(System.in);
+		System.out.println("input");
+		int n=scn.nextInt();
+		int val=2;
+		while(n>1) {
+			if(n%val==0) {
+				n=n/val;
+				System.out.println(val+" ");
+			}
+			else {
+				val++;
+			}
+		}
+		
+		
+		
+		
+	}
+	
+
+}
